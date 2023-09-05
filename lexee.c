@@ -6,7 +6,7 @@ int main()
 {
     FILE *filein = fopen("filein.txt", "r"); 
     FILE *fileout = fopen("fileout.txt", "w");
-    int lineno = 1, tokno = 0, i,j, flag = 0; 
+    int l=1,lineno = 1, tokno = 0, i,j, flag = 0; 
     char ch, str[100], keyword[50][50] = {"int", "main", "if", "else", "while", "for", "return", "do", "switch", "FILE", "printf", "scanf"}; 
     fprintf(fileout,"Line \t\t Token no. \t Token \t\t Lexeme\n");
 
@@ -14,11 +14,39 @@ int main()
     {
         i = 0; flag = 0;
         ch = fgetc(filein);
+         if (ch == '/')
+               {
+                ch = fgetc(filein);
+                if (ch == '/')
+                {
+                   while ((ch = fgetc(filein)) != '\n')
+                   {
+                       if (ch == '\n')
+                        break;
+                    }
+                l++;
+                }
+             else if (ch == '*')
+              {
+                while ((ch = fgetc(filein)) != '*')
+                {
+                    if (ch == EOF)
+                        break;
+                }
+                ch = fgetc(filein);
+                if (ch == '/')
+                {
+                    continue;
+                }
+            }
+        }
+
         if (ch=='+' || ch=='-' || ch=='*' || ch=='/' || ch=='%')
         {
                         fprintf(fileout,"%d\t\t %d\t\t Operator\t %c\n",lineno,tokno,ch);
                         tokno++;
         }
+       
         
         else if ( ch==';' || ch=='{' || ch=='}' || ch=='?' || ch=='|' || ch=='[' || ch==']'|| ch==':' || ch=='(' || ch==')' || ch=='?' || ch=='@' ||ch=='!' || ch=='%')
         {
@@ -72,6 +100,7 @@ int main()
                         fprintf(fileout,"%d\t\t %d\t\tSpecial symbol\t %c\n",lineno,tokno,ch);
                         tokno++;
             }
+
           
            if ( ch==';' || ch=='{' || ch=='}' || ch=='?' || ch=='|' || ch=='[' || ch==']'|| ch==':' || ch=='(' || ch==')' || ch=='?' || ch=='@' ||ch=='!' || ch=='%')
         {
