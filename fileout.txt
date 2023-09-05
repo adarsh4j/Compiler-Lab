@@ -20,7 +20,3 @@ Line 		 Token no. 	 Token 		 Lexeme
 9		 18		 Digit		 0
 9		 19		 Special Symbol	 ;
 10		 20		 Special Symbol	 }
-9		 26		 Keyword	 return
-9		 27		 Digit		 0
-9		 28		 Special Symbol	 ;
-10		 29		 Special Symbol	 }
