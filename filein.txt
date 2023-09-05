@@ -4,7 +4,7 @@
 int main()
 {
 
-    printf("Hello My name is Adarsh");
+    //printf("Hello My name is Adarsh");
     a=b+c;
     return 0;
 }
