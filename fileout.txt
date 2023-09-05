@@ -10,21 +10,16 @@ Line 		 Token no. 	 Token 		 Lexeme
 4		 8		Special Symbol	 (
 4		 9		 Special Symbol	 )
 5		 10		 Special Symbol	 {
-7		 11		 Keyword	 printf
-7		 12		Special Symbol	 (
-7		 13		 Identifier	 Hello
-7		 14		 Identifier	 My
-7		 15		 Identifier	 name
-7		 16		 Identifier	 is
-7		 17		 Identifier	 Adarsh
-7		 18		 Special Symbol	 )
-7		 19		 Special Symbol	 ;
-8		 20		 Identifier	 a
-8		 21		Special symbol	 =
-8		 22		 Identifier	 b
-8		 23		 Operator	 +
-8		 24		 Identifier	 c
-8		 25		Special Symbol	 ;
+8		 11		 Identifier	 a
+8		 12		Special symbol	 =
+8		 13		 Identifier	 b
+8		 14		 Operator	 +
+8		 15		 Identifier	 c
+8		 16		Special Symbol	 ;
+9		 17		 Keyword	 return
+9		 18		 Digit		 0
+9		 19		 Special Symbol	 ;
+10		 20		 Special Symbol	 }
 9		 26		 Keyword	 return
 9		 27		 Digit		 0
 9		 28		 Special Symbol	 ;
