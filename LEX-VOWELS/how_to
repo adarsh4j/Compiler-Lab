@@ -1,0 +1,3 @@
+lex lexcount.l
+gcc lex.yy.c -o lexcount -lfl
+./lexcount < input1.txt
